@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { getCategories } from '../services'
+import Image from 'next/image'
 
 const Header = () => {
   const [categories, setCategories] = useState([])
@@ -12,8 +13,15 @@ const Header = () => {
       <div className="inline-block w-full border-b border-blue-400 py-8">
         <div className="block md:float-left">
           <Link href="/">
-            <span className="font-blod-4xl cursor-pointer text-white">
-              BlogCMS
+            <span className="font-bold-4xl cursor-pointer text-white">
+              <Image
+                alt="CMS Blog"
+                unoptimized
+                height="72px"
+                width="200px"
+                className="align-left rounded-full"
+                src="https://media.graphassets.com/d04YkUV6SnytE9GIO9D3"
+              />
             </span>
           </Link>
         </div>
